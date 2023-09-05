@@ -13,6 +13,7 @@ public class LambdaInvokeService {
                 .functionName(functionName)
                 .payload(SdkBytes.fromUtf8String(messageBody))
                 .build();
+
         logger.log("Payload in Strings = "+ request.payload().asUtf8String());
         try {
             // Invoke the Lambda function and obtain the response
